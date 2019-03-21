@@ -3,10 +3,13 @@ Theme Name:   Hawks Publicidade
 Theme URI:    https://hawks.com.br/
 Author:       Raphael Freitas - Hawks
 Author URI:   https://hawks.com.br/
-Description:  Site da Agência Hawks - Criado em 2019.
-Version:      12.0
+Description:  Site da Agencia Hawks - Criado em 2019.
+Version:      12.0
 License:      Closed - Copyright by Hawks
-Text Domain:  Agência Hawks
-Tags:         Institucional, Tema da Agência, Boostratp, Javascript, AngularJS, PHP, SCSS, Bulma
+Text Domain:  Agencia Hawks
+Tags:         Institucional, Tema da Agencia, Bootstrap, jQuery, Ruby, PHP, SCSS, Bulma, SASS, Compass
 */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+@import url('stylesheets/screen.css') screen, projection;
+@import url('stylesheets/print.css') print;
+body{font-family: 'Montserrat', sans-serif;};
