@@ -6,7 +6,7 @@
        -o-#{$property}: #{$value};
           #{$property}: #{$value};
 }
-@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
+@mixin background-g-vertical($startColor: #3C3C3C, $endColor: #999999) {
     background-color: $startColor;
     background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
     background-image: -webkit-linear-gradient(top, $startColor, $endColor);
@@ -16,7 +16,7 @@
     background-image:         linear-gradient(top, $startColor, $endColor);
     filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
 }
-@mixin background-horizontal($startColor: #3C3C3C, $endColor: #999999) {
+@mixin background-g-horizontal($startColor: #3C3C3C, $endColor: #999999) {
     background-color: $startColor;
     background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
     background-image: -webkit-linear-gradient(left, $startColor, $endColor);
@@ -25,29 +25,6 @@
     background-image:      -o-linear-gradient(left, $startColor, $endColor);
     background-image:         linear-gradient(left, $startColor, $endColor);
     filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}', gradientType='1');
-}
-@mixin border-radius($radius: 5px) {
-    @include css3-prefix('border-radius', $radius);
-}
-@mixin box-rgba($r: 60, $g: 3, $b: 12, $opacity: 0.23, $color: #3C3C3C) {
-  background-color: transparent;
-  background-color: rgba($r, $g, $b, $opacity);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color}',endColorstr='#{$color}');
-            zoom:   1;
-}
-@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
-  @if ($inset != "") {
-    @include css3-prefix('box-shadow', $inset $x $y $blur $color);
-  } @else {
-    @include css3-prefix('box-shadow', $x $y $blur $color);
-  }
-}
-@mixin opacity($opacity: 0.5) {
-    $opacityMultiplied: ($opacity * 100);
-
-    filter:         alpha(opacity=$opacityMultiplied);
-    -ms-filter:     "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacityMultiplied + ")";
-    @include css3-prefix('opacity', $opacity);
 }
 @mixin transform($params) {
   @include css3-prefix('transform', $params);
@@ -90,4 +67,61 @@
   position: absolute;
   right: 0;
   top: 0;
+}
+%transitions{
+  *, *::before, *::after {
+  	transition: all .3s ease-in-out;
+  }
+}
+
+@mixin box-shadow($val...) {
+	box-shadow: ($val);
+	-moz-box-shadow: ($val);
+	-webkit-box-shadow: ($val);
+}
+
+@mixin border-radius($val) {
+	border-radius: ($val);
+}
+
+@mixin transition($val...) {
+	-webkit-transition: ($val);
+	-o-transition: ($val);
+	transition: ($val);
+}
+
+@mixin translateX($val...) {
+	-webkit-transform: translateX($val);
+	-ms-transform: translateX($val);
+	-o-transform: translateX($val);
+	transform: translateX($val);
+}
+
+@mixin translateY($val...) {
+	-webkit-transform: translateY($val);
+	-ms-transform: translateY($val);
+	-o-transform: translateY($val);
+	transform: translateY($val);
+}
+
+@mixin translate3d($val,$val2,$val3) {
+	-webkit-transform: translate3d($val, $val2, $val3);
+	-ms-transform: translate3d($val, $val2, $val3);
+	-o-transform: translate3d($val, $val2, $val3);
+	transform: translate3d($val, $val2, $val3);
+}
+
+@mixin rotate($val){
+	-webkit-transform: rotate($val);
+	-moz-transform: rotate($val);
+	-ms-transform: rotate($val);
+	-o-transform: rotate($val);
+	transform: rotate($val);
+}
+
+@mixin scale($val){
+	-webkit-transform: scale($val);
+	-moz-transform: scale($val);
+	-ms-transform: scale($val);
+	transform: scale($val);
 }
