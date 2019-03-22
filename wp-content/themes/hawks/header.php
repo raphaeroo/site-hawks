@@ -38,10 +38,10 @@
 			</div>
 			<div class="wrap-links">
 				<ul>
-					<a href="#"><li>Link 1</li></a>
-					<a href="#"><li>Link 1</li></a>
-					<a href="#"><li>Link 1</li></a>
-					<a href="#"><li>Link 1</li></a>
+					<a href="#"><li>Link&nbsp;1</li></a>
+					<a href="#"><li>Link&nbsp;1</li></a>
+					<a href="#"><li>Link&nbsp;1</li></a>
+					<a href="#"><li>Link&nbsp;1</li></a>
 				</ul>
 			</div>
 		</div>
