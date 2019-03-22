@@ -30,6 +30,23 @@
 <?php wp_head();?>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" <?php body_class();?>>
+	<!-- Responsive Sidebar -->
+	<div class="sidebar so-cel" id="sidebar">
+		<div class="container-fluid">
+			<div class="col-12 text-center">
+				<img src="<?php bloginfo('template_directory');?>/img/logo-icon.png" alt="Agência Hawks" style="">
+			</div>
+			<div class="wrap-links">
+				<ul>
+					<a href="#"><li>Link 1</li></a>
+					<a href="#"><li>Link 1</li></a>
+					<a href="#"><li>Link 1</li></a>
+					<a href="#"><li>Link 1</li></a>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Fim Sidebar -->
 	<!-- Menu Fixo -->
 	<div class="menu-fixo" id="menu-fixo">
 		<div class="container so-cel ">
@@ -41,10 +58,10 @@
 		<div class="container level sem-cel">
 			<div class="level-left">
 	    <div class="level-item">
-	      <img src="<?php bloginfo('template_directory');?>/img/logo-cor.png" alt="Agência Hawks" style="max-width: 15%;">
+	      <img src="<?php bloginfo('template_directory');?>/img/logo-cor.png" alt="Agência Hawks" style="max-width: 25%;">
 	    </div>
 	  </div>
-	  <div class="level-right sem-cel">
+	  <div class="level-right sem-cel" style="padding-top: 1em;">
 			<p class="level-item has-text-centered">
 		    <a class="link is-info">Home</a>
 		  </p>
@@ -57,23 +74,67 @@
 		  <p class="level-item has-text-centered">
 		    <a class="link is-info">Contato</a>
 		  </p>
+			<p class="level-item"><a href="javascript()" data-toggle="modal" data-target="#orc-rapido" class="button bto-top">Orçamento Rápido</a></p>
 	  </div>
 	</div>
 	</div>
 	<!-- Fim Menu Fixo -->
+	<!-- MODAIS -->
+	<!-- Modal -->
+<div class="modal fade" id="orc-rapido" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="title-modal">Resposta em Até 5h</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="fa fa-times"></i></span>
+        </button>
+      </div>
+      <div class="modal-body">
+				<form>
+			  <div class="form-group">
+			    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Nome">
+			  </div>
+				<div class="form-group">
+			    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="E-Mail">
+			  </div>
+				<div class="form-group">
+			    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Telefone">
+			  </div>
+				<div class="form-group">
+			    <select class="form-control">
+						<option>-- Como podemos Ajudar? --</option>
+			      <option>Desenvolvimento de Sites</option>
+			      <option>SEO (Busca Orgânica)</option>
+			      <option>SMM (Redes Sociais)</option>
+			      <option>PPC (Google Adwords)</option>
+			      <option>Outros</option>
+			    </select>
+			  </div>
+				<div class="form-group">
+			    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Sua Mensagem" rows="3"></textarea>
+			  </div>
+			  <button type="submit" class="btn btn-primary">Enviar</button>
+			</form>
+      </div>
+    </div>
+  </div>
+</div>
+	<!-- FIM MODAIS -->
 <header>
-<div class="topo-site text-center">
+<div class="topo-site text-center animated fadeInUp sem-cel">
 	<div class="container level">
 		<div class="level-left">
     <div class="level-item">
-      <p class="subtitle is-5">
-        <strong>Hawks</strong> - Agência de Marketing Digital
-      </p>
+      <h1 class="subtitle is-5">
+        <strong>Hawks</strong>&nbsp;<i class="fas fa-caret-right"></i>&nbsp;Agência de Marketing Digital
+      </h1>
     </div>
   </div>
-  <div class="level-right sem-cel">
-		<p class="level-item"><i class="fab fa-whatsapp"></i> +55 11 94245-3563 <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fa fa-envelope"></i>
+  <div class="level-right">
+		<p class="level-item"><i class="fab fa-whatsapp"></i> +55 11 94245-3563 <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fa fa-envelope"></i> |
 		</p>
+		<p class="level-item"><a href="javascript()" data-toggle="modal" data-target="#orc-rapido" class="button bto-top">Orçamento Rápido</a></p>
   </div>
 </div>
 </div>
@@ -81,11 +142,11 @@
 <div class="container so-cel ">
 	<div class="row justify-content-around align-items-center">
 		<div class="col-8"><img src="<?php bloginfo('template_directory');?>/img/logo-cor.png" alt="Agência Hawks" style=""></div>
-		<div class="col-2 text-right"><i class="fa fa-bars"></i></div>
+		<div class="col-2 text-right"><i class="fa fa-bars" id="toggle-sidebar"></i></div>
 	</div>
 </div>
 <div class="container sem-cel">
-<nav class="level">
+<nav class="level animated fadeInUp delay-1s">
   <p class="level-item has-text-centered">
     <a class="link is-info">Home</a>
   </p>
@@ -93,7 +154,7 @@
     <a class="link is-info">Blog</a>
   </p>
   <p class="level-item has-text-centered">
-    <img src="<?php bloginfo('template_directory');?>/img/logo-icon.png" alt="Agência Hawks" style="height: 7em;">
+    <img src="<?php bloginfo('template_directory');?>/img/logo-icon.png" alt="Agência Hawks" style="height: 7em;" data-placement="bottom" data-toggle="tooltip" title="Agência Hawks" >
   </p>
   <p class="level-item has-text-centered">
     <a class="link is-info">Serviços</a>

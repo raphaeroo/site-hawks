@@ -101,3 +101,6 @@ $(window).scroll(function() {
     position = scroll;
 });
 //////////////////////////////////////
+$("#toggle-sidebar").click(function(){
+	$("#sidebar").css('width','100%');
+});

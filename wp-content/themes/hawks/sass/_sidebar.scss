@@ -1,0 +1,41 @@
+.sidebar{
+  background-color: rgba(0,0,0,0.9);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow-y: hidden;
+  @include transition(.4s);
+  .container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 2em;
+  }
+  .wrap-links{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    @include translateY(-50%);
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      list-style: none;
+      li{
+        margin: 0;
+        color: white;
+        background-color: $transparente;
+        width: 100%;
+        padding: 1em 0em;
+        &:hover{
+          background-color: $cor-hawks;
+          color: $cor-hawks-secundaria;
+        }
+      }
+    }
+  }
+}

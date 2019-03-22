@@ -1,4 +1,31 @@
 @media screen and (max-width: 768px){
+  body{
+    overflow-y: hidden;
+  }
   .sem-cel{display: none;}
-  .so-cel{display: inherit!important;}
+  .so-cel{display: block!important;}
+  .slider-3{
+    text-align: left!important;
+    padding-left: 1em!important;
+  }
+}
+@include keyframes(seta){
+  0% {@include translateY(30%);}
+  50% {@include translateY(-30%);}
+  100% {@include translateY(30%);}
+}
+@include keyframes(shake){
+  10%, 90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%, 80% {
+		transform: translate3d(2px, 0, 0);
+	}
+	30%, 50%, 70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+	40%, 60% {
+		transform: translate3d(4px, 0, 0);
+	}
 }

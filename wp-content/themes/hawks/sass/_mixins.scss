@@ -26,9 +26,6 @@
     background-image:         linear-gradient(left, $startColor, $endColor);
     filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}', gradientType='1');
 }
-@mixin transform($params) {
-  @include css3-prefix('transform', $params);
-}
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
@@ -70,7 +67,7 @@
 }
 %transitions{
   *, *::before, *::after {
-  	transition: all .3s ease-in-out;
+  	transition: all .3s ease;
   }
 }
 
