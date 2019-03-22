@@ -104,6 +104,9 @@ $(window).scroll(function() {
 $("#toggle-sidebar").click(function(){
 	$("#sidebar").css('width','100%');
 });
+$("#toggle-sidebar-2").click(function(){
+	$("#sidebar").css('width','100%');
+});
 $("#sidebar").click(function(){
 	$("#sidebar").css('width','0%');
 });

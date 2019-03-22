@@ -52,7 +52,7 @@
 		<div class="container so-cel ">
 			<div class="row justify-content-around align-items-center">
 				<div class="col-8"><img src="<?php bloginfo('template_directory');?>/img/logo-cor.png" alt="Agência Hawks" style=""></div>
-				<div class="col-2 text-right"><i class="fa fa-bars"></i></div>
+				<div class="col-2 text-right"><i class="fa fa-bars" id="toggle-sidebar"></i></div>
 			</div>
 		</div>
 		<div class="container level sem-cel">
@@ -142,7 +142,7 @@
 <div class="container so-cel ">
 	<div class="row justify-content-around align-items-center">
 		<div class="col-8"><img src="<?php bloginfo('template_directory');?>/img/logo-cor.png" alt="Agência Hawks" style=""></div>
-		<div class="col-2 text-right"><i class="fa fa-bars" id="toggle-sidebar"></i></div>
+		<div class="col-2 text-right"><i class="fa fa-bars" id="toggle-sidebar-2"></i></div>
 	</div>
 </div>
 <div class="container sem-cel">
