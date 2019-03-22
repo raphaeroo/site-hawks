@@ -12,6 +12,16 @@ a:link, a:hover, a:active, a:visited {
 	display: none !important;
 }
 $altura-slider: 750px;
+.menu-fixo{
+	width: 100%;
+	background-color: white;
+	height: auto;
+	padding: 1em 0em;
+	position: fixed;
+	top: -300px;
+	z-index: 50;
+	transition: top 0.7s ease-in-out;
+}
 header{
 	position: absolute;
 	top: 0;
@@ -77,17 +87,55 @@ header{
 		  -moz-background-size: cover;
 		  -o-background-size: cover;
 		  background-size: cover;
+			&:before{
+				@include pseudo();
+				height: 100%;
+				width: 100%;
+				background: rgba(0,0,0,0.7);
+				z-index: 1;
+			}
+			.video-wrap{
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+			}
 		}
 		.content-slider{
 			opacity: 1;
 			text-align: center;
 			position: relative;
 			top: 50%;
+			z-index: 5;
 			@include translateY(-50%);
+		}
+		.slider-1{
+			h2{
+				color: white;
+				font-weight: 800;
+				text-transform: uppercase;
+				font-size: 3rem;
+			}
+			h3{
+				color: white;
+				font-weight: 400;
+				text-transform: capitalize;
+				font-size: 2rem;
+			}
+		}
+		.carousel-control-prev{
+			z-index: 7;
+			opacity: 0;
+			transition: .4s ease;
+		}
+		.carousel-control-next{
+			z-index: 7;
+			opacity: 0;
+			transition: .4s ease;
 		}
 }
 #corpo-teste{
-	height: 50vh;
+	height: 80vh;
 	background-color: green;
 	width: 100%;
 }

@@ -9,7 +9,7 @@ License:      Closed - Copyright by Hawks
 Text Domain:  Agencia Hawks
 Tags:         Institucional, Tema da Agencia, Bootstrap, jQuery, Ruby, PHP, SCSS, Bulma, SASS, Compass
 */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900');
 @import url('stylesheets/screen.css') screen, projection;
 @import url('stylesheets/print.css') print;
 body{font-family: 'Montserrat', sans-serif;};
