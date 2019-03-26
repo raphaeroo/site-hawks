@@ -29,3 +29,8 @@
 		transform: translate3d(4px, 0, 0);
 	}
 }
+@include keyframes(borda){
+  0% {border: 1px solid $cor-borda;}
+  50% {border: 1px solid $cor-hawks;}
+  100% {border: 1px solid $cor-borda;}
+}

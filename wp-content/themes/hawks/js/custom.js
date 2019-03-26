@@ -110,3 +110,9 @@ $("#toggle-sidebar-2").click(function(){
 $("#sidebar").click(function(){
 	$("#sidebar").css('width','0%');
 });
+//////////////////////////////////////
+$('#bto-enviar').click(function(){
+	$('#bto-enviar').attr('value', 'Enviando...').delay( 2000 ).queue(function(){
+			$('#bto-enviar').attr('value', 'Enviado');
+	});
+});

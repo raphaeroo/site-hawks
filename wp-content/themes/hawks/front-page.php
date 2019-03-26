@@ -68,12 +68,37 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Próximo</span>
       </a>
-      <a href="#corpo-teste" class="scroll-to-section-2"><i class="fas fa-angle-double-down"></i></a>
+      <a href="#baixo-banner" class="scroll-to-section-2"><i class="fas fa-angle-double-down"></i></a>
     </div>
 </section>
-<section id="corpo-teste">
+<section id="baixo-banner">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+      <div class="chama-form">
+        <p>Faça um Orçamento</p>
+        <h3>Temos a Solução para seu Negócio</h3>
+        <h4>Tem um projeto? Ou uma dúvida? Fale Conosco! Se preferir, podemos ligar para você, basta deixar seu telefone e iremos entrar em contato, ou fale conosco pelo Whatsapp Agora Mesmo!</h4>
+        <a class="button">
+          <span class="icon">
+            <i class="fab fa-whatsapp"></i>
+          </span>
+          <span>Whatsapp</span>
+        </a>
+      </div>
+      <div class="espaco-padding-v"></div>
+    </div>
+    <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
+      <div class="formulario-topo">
+        <?php echo do_shortcode('[contact-form-7 id="5" title="form-baixo-banner"]'); ?>
+      </div>
+    </div>
+    </div>
+  </div>
 </section>
-
+<section id="nossos-trabalhos">
+  
+</section>
 
 
 

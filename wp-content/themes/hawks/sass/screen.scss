@@ -13,6 +13,12 @@ a:link, a:hover, a:active, a:visited {
 .so-cel{
 	display: none !important;
 }
+.espaco-padding-v{
+	padding: 2em 0em
+}
+.espaco-margin-v{
+	margin: 2em 0em;
+}
 $altura-slider: 750px;
 .menu-fixo{
 	width: 100%;
@@ -22,6 +28,7 @@ $altura-slider: 750px;
 	top: -300px;
 	z-index: 50;
 	@include transition(top 0.7s ease-in-out);
+	@include box-shadow(0px 2px 5px black);
 }
 header{
 	position: absolute;
@@ -297,9 +304,95 @@ header{
 			}
 		}
 }
-#corpo-teste{
-	height: 80vh;
-	background-color: green;
+#baixo-banner{
+	height: auto;
+	background-color: $cor-hawks-secundaria;
 	width: 100%;
+	padding: 2em 0em;
+	.chama-form{
+		color: black;
+		text-align: left;
+		h3{
+			font-weight: 800;
+			font-size: 6rem;
+			padding: .1em 0em .2em 0em;
+			//color: $cor-hawks;
+		}
+		h4{
+			line-height: 1.5;
+			padding-bottom: .5em;
+		}
+		p{
+			font-size: 1.2rem;
+			font-style: italic;
+			font-weight: 600;
+		}
+		a.button{
+			background-color: $whatsapp;
+	    padding: 1em;
+	    font-size: 1.5rem;
+	    color: white;
+			font-weight: 600;
+		}
+	}
+	.formulario-topo{
+		label{
+			color: black;
+			font-size: 1.3rem;
+		}
+		input, textarea, select{
+			border: 1px solid #dcdbdb;
+			color: black;
+			@include border-radius(0px);
+			&:focus{
+				@include box-shadow(0px 0px 5px $cor-hawks);
+				color: $cor-hawks;
+				border: 1px solid $cor-hawks;
+			}
+		}
+		select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 0px;
+    background-image: url("https://image.flaticon.com/icons/svg/128/128518.svg");
+    background-position: 99% 50%;
+    background-repeat: no-repeat;
+    background-size: 16px;
+		}
+	}
+	.bt-form{
+		border: 1px solid $cor-borda;
+		background-color: $transparente;
+		width: 40%;
+		color: black;
+		font-size: 1.4rem;
+		@include border-radius(0px);
+		@include transition(width .4s, linear .2s);
+		@include animation(borda 3s infinite);
+		&:focus{
+			border: 1px solid $cor-hawks;
+			background-color: $cor-hawks;
+			color: $cor-hawks-secundaria !important;
+			width: 100%;
+			&:hover{
+				border: 1px solid $cor-hawks;
+				background-color: $cor-hawks;
+				color: $cor-hawks-secundaria;
+				width: 100%;
+			}
+		}
+		&:hover{
+			width: 42%;
+			border: 1px solid $cor-hawks;
+			color: $cor-hawks;
+			@include animation(borda 1s);
+		}
+	}
+}
+#nossos-trabalhos{
+	width: 100%;
+	background-color: $cinza;
+	height: auto;
+	padding: 2em 0em;
 }
 @import 'media';
