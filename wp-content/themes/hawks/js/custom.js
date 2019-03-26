@@ -113,6 +113,7 @@ $("#sidebar").click(function(){
 //////////////////////////////////////
 $('#bto-enviar').click(function(){
 	$('#bto-enviar').attr('value', 'Enviando...').delay( 2000 ).queue(function(){
-			$('#bto-enviar').attr('value', 'Enviado');
-	});
+			$('#bto-enviar').attr('value', 'Enviado').delay( 1000 ).addClass('is-hidden');
+})
+$('#send-again').removeClass('is-hidden');
 });
