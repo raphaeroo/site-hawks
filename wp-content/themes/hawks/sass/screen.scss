@@ -19,16 +19,19 @@ a:link, a:hover, a:active, a:visited {
 .espaco-margin-v{
 	margin: 2em 0em;
 }
+#toggle-sidebar-2{
+	cursor: pointer;
+}
 $altura-slider: 750px;
 .menu-fixo{
 	width: 100%;
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255,255,255,0.97);
 	height: auto;
 	position: fixed;
 	top: -300px;
 	z-index: 50;
 	@include transition(top 0.7s ease-in-out);
-	@include box-shadow(0px 2px 5px black);
+	@include box-shadow(0px 2px 5px $preto-hawks);
 }
 header{
 	position: absolute;
@@ -109,6 +112,32 @@ header{
 			color: $cor-hawks-secundaria;
 			background-color: $transparente;
 			@include box-shadow(0px 0px 15px $cor-hawks-secundaria);
+		}
+	}
+}
+section:not(#slider) {
+	width: 100%;
+	height: auto;
+	padding: 2em 0em;
+	h3{
+		font-weight: 800;
+		font-size: 6rem;
+		padding: .1em 0em .2em 0em;
+	}
+	p{
+		font-size: 1.2rem;
+		font-style: italic;
+		font-weight: 600;
+		color: $preto-hawks;
+	}
+	h5{
+		color: $preto-hawks;
+		font-size: 4rem;
+		font-weight: 800;
+		padding-bottom: 1.5rem;
+		@include transition(all 2s ease-out);
+		&:hover{
+			@include scale(1.15);
 		}
 	}
 }
@@ -217,7 +246,7 @@ header{
 				text-transform: uppercase;
 				font-size: 4rem;
 				color: orange;
-				text-shadow: 0px 0px 3px black, 1px 1px 5px black, -1px -1px 5px white, 0px 0px 15px black;
+				text-shadow: 0px 0px 3px $preto-hawks, 1px 1px 5px $preto-hawks, -1px -1px 5px white, 0px 0px 15px $preto-hawks;
 				@media screen and (max-width: 768px){
 					font-size: 2.7rem;
 				}
@@ -305,12 +334,9 @@ header{
 		}
 }
 #baixo-banner{
-	height: auto;
 	background-color: $cor-hawks-secundaria;
-	width: 100%;
-	padding: 2em 0em;
 	.chama-form{
-		color: black;
+		color: $preto-hawks;
 		text-align: left;
 		h3{
 			font-weight: 800;
@@ -337,12 +363,12 @@ header{
 	}
 	.formulario-topo{
 		label{
-			color: black;
+			color: $preto-hawks;
 			font-size: 1.3rem;
 		}
 		input, textarea, select{
 			border: 1px solid #dcdbdb;
-			color: black;
+			color: $preto-hawks;
 			@include border-radius(0px);
 			&:focus{
 				@include box-shadow(0px 0px 5px $cor-hawks);
@@ -359,12 +385,16 @@ header{
     background-repeat: no-repeat;
     background-size: 16px;
 		}
+		#send-again{
+			opacity: 0;
+			@include transition(opacity 1s ease-in-out, width .4s);
+		}
 	}
 	.bt-form{
 		border: 1px solid $cor-borda;
 		background-color: $transparente;
 		width: 40%;
-		color: black;
+		color: $preto-hawks;
 		font-size: 1.4rem;
 		@include border-radius(0px);
 		@include transition(width .4s, linear .2s);
@@ -390,9 +420,160 @@ header{
 	}
 }
 #nossos-trabalhos{
-	width: 100%;
-	background-color: $cinza;
-	height: auto;
-	padding: 2em 0em;
+	background-color: $bg-sessao;
+	.box-jobs{
+		padding: 1em;
+		@include border-radius(5px);
+		&:hover{
+			@include box-shadow(0px 0px 5px $cinza);
+			background-color: $cor-hawks-secundaria;
+			.header-box-jobs{
+				@include animation(shake 0.82s cubic-bezier(.36,.07,.19,.97) both);
+			}
+			i{
+				@include box-shadow(0px 0px 2px $preto-hawks);
+				background-color: $cor-hawks;
+				color: $cor-hawks-secundaria;
+				border: 1px solid $transparente;
+			}
+			.footer-box-jobs{
+				button.button-box-jobs{
+					background-color: $cor-hawks;
+				}
+			}
+		}
+		i{
+			color: $preto-hawks;
+			border: 1px solid $preto-hawks;
+			background-color: $transparente;
+			@include border-radius(50%);
+			font-size: 2.3rem;
+			padding: .8em;
+			@include transition(all .2s ease-out);
+		}
+		.body-box-jobs{
+			padding: 1em 0em .6em 0em;
+			h6{
+				color: $preto-hawks;
+				font-size: 2rem;
+				text-align: center;
+			}
+			p{
+				font-style: normal;
+				font-size: 11pt;
+		    line-height: 1.7;
+		    font-weight: 300;
+		    color: #222;
+		    margin-bottom: 3%;
+		    text-align: justify;
+			}
+		}
+		.footer-box-jobs{
+			button.button-box-jobs{
+				background-color: $preto-hawks;
+				border: 1px solid $transparente;
+				color: $cor-hawks-secundaria;
+				width: 100%;
+				padding: .6em 0em;
+				@include transition(.3s ease-in-out);
+				&:hover{
+					border: 1px solid $cor-hawks;
+					color: $cor-hawks-secundaria;
+					@include box-shadow(0px 0px 15px $cor-hawks);
+					@include border-radius(10px);
+				}
+			}
+		}
+	}
 }
+#responsivo{
+	background-color: $preto-hawks;
+	padding-bottom: 2em!important;
+	.hero-responsivo{
+		h3{
+			color: $cor-hawks-secundaria;
+			@media screen and (max-width: 768px){
+				font-size: 4rem;
+			}
+			span{
+				@media screen and (max-width: 768px){
+					display: none;
+				}
+			}
+		}
+		p{
+			color: $cor-hawks-secundaria;
+			font-style: normal;
+		}
+		button{
+			background-color: $cor-hawks-secundaria;
+	    padding: .6em 1em;
+	    font-size: 1.5rem;
+	    color: $preto-hawks;
+	    border: 1px solid $cor-hawks-secundaria;
+			@include transition(all .4s ease-in-out);
+			&:hover{
+				background-color: $cor-hawks;
+				border: 1px solid $cor-hawks;
+				color: $cor-hawks-secundaria;
+				@include box-shadow(0px 0px 7px $cor-hawks);
+			}
+			@media screen and (max-width: 768px){
+				width: 100%;
+			}
+		}
+	}
+	#carousel{
+		.item{
+			.tela-carousel{
+				background-position: center center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: auto;
+				height: 100%;
+				padding: 55% 0;
+			}
+			.tela-1{background-image: url('../img/imac.png');}
+			.tela-2{background-image: url('../img/ipad.png');}
+			.tela-3{background-image: url('../img/iphone.png');}
+		}
+	}
+}
+#vem-pra-hawks{
+	background-color: $cor-hawks-secundaria;
+	.metodo-box{
+		padding: .3em;
+		&:hover{
+			[class*='icon-']{
+					filter: grayscale(0);
+					@include scale(1.1);
+				}
+		}
+		.icon-metodo-box{
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			width: 3em;
+			height: 3em;
+			filter: grayscale(1);
+			@include transition(all .2s ease);
+		}
+		.icon-1{background-image: url('../img/circ-1.png');}
+		.icon-2{background-image: url('../img/circ-2.png');}
+		.icon-3{background-image: url('../img/circ-3.png');}
+		.icon-4{background-image: url('../img/circ-4.png');}
+		.icon-5{background-image: url('../img/circ-5.png');}
+		.icon-6{background-image: url('../img/circ-6.png');}
+		h6{
+			font-size: 1.7rem;
+			color: $preto-hawks;
+		}
+		p{
+			font-style: normal;
+			color: $preto-hawks;
+			font-weight: 400;
+		}
+	}
+}
+
 @import 'media';

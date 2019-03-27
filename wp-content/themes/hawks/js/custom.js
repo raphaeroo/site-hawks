@@ -113,7 +113,34 @@ $("#sidebar").click(function(){
 //////////////////////////////////////
 $('#bto-enviar').click(function(){
 	$('#bto-enviar').attr('value', 'Enviando...').delay( 2000 ).queue(function(){
-			$('#bto-enviar').attr('value', 'Enviado').delay( 1000 ).addClass('is-hidden');
-})
-$('#send-again').removeClass('is-hidden');
+			$('#bto-enviar').attr('value', 'Enviado');
+			setTimeout(function(){
+			  $('#bto-enviar').addClass("is-hidden");
+			}, 2000);
+			setTimeout(function(){
+			  $('#send-again').css("opacity", "1");
+			}, 2000);
+});
+});
+///////////////////////////////////////
+$('#carousel').owlCarousel({
+	items:1,
+	margin: 10,
+	loop: true,
+	dots: false,
+	nav: false,
+	autoplay:true,
+	autoplayTimeout:3000,
+	autoplayHoverPause:true,
+	responsive: {
+		0: {
+			items: 1
+		},
+		600: {
+			items: 1
+		},
+		1000: {
+			items: 1
+		}
+	}
 });
