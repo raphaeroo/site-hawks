@@ -132,7 +132,7 @@
     </div>
   </div>
   <div class="level-right">
-		<p class="level-item"><i class="fab fa-whatsapp"></i> +55 11 94245-3563 <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fa fa-envelope"></i> |
+		<p class="level-item"><a class="link-zap" href="#"><i class="fab fa-whatsapp"></i> +55 11 94245-3563</a> <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fa fa-envelope"></i> |
 		</p>
 		<p class="level-item"><a href="javascript()" data-toggle="modal" data-target="#orc-rapido" class="button bto-top">Orçamento Rápido</a></p>
   </div>

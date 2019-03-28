@@ -7,6 +7,10 @@ a:link, a:hover, a:active, a:visited {
 	color: inherit;
 	text-decoration: none;
 }
+::selection{
+	color: $cor-hawks-secundaria;
+	background: $cor-hawks;
+}
 .clear{
 	clear: both;
 }

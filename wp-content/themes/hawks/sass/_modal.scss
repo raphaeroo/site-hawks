@@ -91,3 +91,9 @@ color: $cor-hawks;
   }
 }
 }
+.link-zap{
+  @include transition(all .6s ease);
+  &:hover{
+    color: $whatsapp;
+  }
+}
