@@ -173,7 +173,7 @@
         </div>
       </div>
       <div class="col-md-6 col-xs-12 col-sm-12 col-lg-6 order-sm-1 order-xs-1 order-lg-2 order-md-2">
-        <div class="owl-carousel owl-theme text-center space-two" id="carousel">
+        <div class="owl-carousel owl-theme text-center" id="carousel">
 	         <div class="item">
              <div class="tela-carousel tela-1"></div>
            </div>
@@ -277,5 +277,78 @@
     </div>
   </div>
 </section>
-
+<section id="blog-area">
+  <div class="container">
+    <div class="col-12 text-center" data-aos="fade-up" data-aos-duration="900"><p>Últimas Notícias sobre Marketing Digital</p>
+      <h5>Nosso Blog</h5></div>
+      <div class="row align-items-center" data-aos="fade-up" data-aos-duration="900" data-aos-delay="250">
+        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+          <a href="#">
+            <div class="box-blog">
+              <div class="img-blog mb-2" style="background-image: url('');"></div>
+              <small>Data post</small>
+              <h6  class="mt-3">Titulo Blog</h6>
+              <p>Excerpt Blog</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+          <a href="#">
+            <div class="box-blog">
+              <div class="img-blog mb-2" style="background-image: url('');"></div>
+              <small>Data post</small>
+              <h6  class="mt-3">Titulo Blog</h6>
+              <p>Excerpt Blog</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+          <a href="#">
+            <div class="box-blog">
+              <div class="img-blog mb-2" style="background-image: url('');"></div>
+              <small>Data post</small>
+              <h6  class="mt-3">Titulo Blog</h6>
+              <p>Excerpt Blog</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+          <a href="#">
+            <div class="box-blog">
+              <div class="img-blog mb-2" style="background-image: url('');"></div>
+              <small>Data post</small>
+              <h6  class="mt-3">Titulo Blog</h6>
+              <p>Excerpt Blog</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-12 text-center"><a class="button" href="#">Ver Mais</a></div>
+  </div>
+</section>
+<section id="carousel-footer">
+  <div class="container pb-2">
+    <div class="col-12 text-center pb-2"><p>Amigos e Parceiros</p></div>
+    <div class="owl-carousel owl-theme text-center" id="owl-carousel-footer">
+       <div class="item">
+         <img src="<?php bloginfo('template_directory')?>/img/clientes/w1.png" style="width: 50%;" width="50%" height="auto" />
+       </div>
+       <div class="item">
+         <img src="<?php bloginfo('template_directory')?>/img/clientes/w2.png" style="width: 50%;" width="50%" height="auto" />
+       </div>
+       <div class="item">
+         <img src="<?php bloginfo('template_directory')?>/img/clientes/w3.png" style="width: 50%;" width="50%" height="auto" />
+       </div>
+       <div class="item">
+         <img src="<?php bloginfo('template_directory')?>/img/clientes/w4.png" style="width: 50%;" width="50%" height="auto" />
+       </div>
+       <div class="item">
+         <img src="<?php bloginfo('template_directory')?>/img/clientes/w5.png" style="width: 50%;" width="50%" height="auto" />
+       </div>
+       <div class="item">
+         <img src="<?php bloginfo('template_directory')?>/img/clientes/w6.png" style="width: 50%;" width="50%" height="auto" />
+       </div>
+    </div>
+  </div>
+</section>
 <?php get_footer();?>

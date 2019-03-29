@@ -30,7 +30,8 @@
 <?php wp_head();?>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" <?php body_class();?>>
-	<!-- Responsive Sidebar -->
+	<button onclick="topFunction()" id="myBtn" data-placement="left" data-toggle="tooltip" title="Topo"><i class="fas fa-caret-up"></i></button>
+	<!-- Inicio Sidebar -->
 	<div class="sidebar so-cel" id="sidebar">
 		<div class="container-fluid">
 			<div class="col-12 text-center">
