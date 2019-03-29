@@ -32,15 +32,7 @@
     <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
       <div class="mid-footer">
         <h6>Receba nossas Novidades</h6>
-        <form>
-          <div class="form-group">
-            <input type="Nome" class="form-control" placeholder="Nome">
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="E-Mail">
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+        <?php echo do_shortcode('[contact-form-7 id="7" title="form-rodape"]');?>
       </div>
     </div>
   </div>
@@ -59,7 +51,7 @@
     <div class="level-right">
       <div class="level-item">
         <p class="subtitle is-5">
-           <script type="text/JavaScript">document.write(new Date().getFullYear());</script> © Hawks Publicidade Digital 
+           <script type="text/JavaScript">document.write(new Date().getFullYear());</script> © Hawks Publicidade Digital
         </p>
       </div>
     </div>
