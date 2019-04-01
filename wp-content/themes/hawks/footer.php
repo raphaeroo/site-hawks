@@ -64,7 +64,7 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/swipe.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/aos.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/isotope.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/modernizr-2.6.2.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/custom.js"></script>
 <?php wp_footer();?>
 </body>

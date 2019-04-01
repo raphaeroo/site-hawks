@@ -308,3 +308,76 @@ $content = apply_filters('the_content', $content);
 $content = str_replace(']]>', ']]&gt;', $content);
 return $content;
 }
+
+/* POST TYPE BLOG */
+function custom_post_type() {
+
+// Set UI labels for Custom Post Type
+  $labels = array(
+    'name'                => _x( 'blog', 'Post Type General Name', 'twentythirteen' ),
+    'singular_name'       => _x( 'blog', 'Post Type Singular Name', 'twentythirteen' ),
+    'menu_name'           => __( 'blog', 'twentythirteen' ),
+    'parent_item_colon'   => __( 'blog Relacionado', 'twentythirteen' ),
+    'all_items'           => __( 'Todos os blog', 'twentythirteen' ),
+    'view_item'           => __( 'Ver blog', 'twentythirteen' ),
+    'add_new_item'        => __( 'Adicionar novo blog', 'twentythirteen' ),
+    'add_new'             => __( 'Adicionar novo', 'twentythirteen' ),
+    'edit_item'           => __( 'Editar blog', 'twentythirteen' ),
+    'update_item'         => __( 'Atualizar blog', 'twentythirteen' ),
+    'search_items'        => __( 'Buscar por blog', 'twentythirteen' ),
+    'not_found'           => __( 'Nenhum Segmento encontrado', 'twentythirteen' ),
+    'not_found_in_trash'  => __( 'Nenhum Segmento encontrado na lixeira', 'twentythirteen' ),
+  );
+
+
+// Set other options for Custom Post Type
+
+  $args = array(
+    'label'               => __( 'blog', 'twentythirteen' ),
+    'description'         => __( 'blog news and reviews', 'twentythirteen' ),
+    'labels'              => $labels,
+    // Features this CPT supports in Post Editor
+    'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+    // You can associate this CPT with a taxonomy or custom taxonomy.
+    'taxonomies'          => array( 'genres' ),
+    /* A hierarchical CPT is like Pages and can have
+    * Parent and child items. A non-hierarchical CPT
+    * is like Posts.
+    */
+    'hierarchical'        => false,
+    'menu_icon'			  => false,
+    'public'              => true,
+    'show_ui'             => true,
+    'show_in_menu'        => true,
+    'show_in_nav_menus'   => true,
+    'show_in_admin_bar'   => true,
+    'menu_position'       => 5,
+    'can_export'          => true,
+    'has_archive'         => false,
+    'exclude_from_search' => false,
+    'publicly_queryable'  => true,
+    'capability_type'     => 'page',
+ // This is where we add taxonomies to our CPT
+    'taxonomies'          => array( 'category' ),
+  );
+
+  // Registering your Custom Post Type
+  register_post_type( 'blog', $args );
+
+}
+
+//Registrar uma taxonomia nese post type
+register_taxonomy(
+  "categorias",
+      "BLOG",
+      array(
+        "label" => "Categorias",
+            "singular_label" => "Categoria",
+            "rewrite" => true,
+            "hierarchical" => true
+  )
+);
+
+add_action( 'init', 'custom_post_type', 0 );
+
+/* POST TYPE BLOG FIM */
