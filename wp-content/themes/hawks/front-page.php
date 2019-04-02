@@ -323,7 +323,7 @@
           </a>
         </div>
       </div>
-      <div class="col-12 text-center"><a class="button" href="#">Ver Mais</a></div>
+      <div class="col-12 text-center"><a class="button" target="_blank" href="<?php echo site_url();?>/blog/">Ver Mais</a></div>
   </div>
 </section>
 <section id="carousel-footer">

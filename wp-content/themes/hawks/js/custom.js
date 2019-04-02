@@ -52,7 +52,10 @@ $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
 }
 });
  /////////////////////////////////////
- $(window).on("scroll", function() {
+$(document).ready(function(){
+	$("#myBtn").fadeOut();
+});
+$(window).on("scroll", function() {
  	var scrollPos = $(window).scrollTop();
  	if (scrollPos <= 150) {
  		$("#myBtn").fadeOut();
