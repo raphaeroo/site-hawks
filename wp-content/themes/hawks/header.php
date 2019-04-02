@@ -26,6 +26,9 @@
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/icones/css/all.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/animate.css" />
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/style.css" />
+<!-- Header Dinamico
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/stylesheet/header.css" />
+ Fim Header Dinamico -->
   <!-- Fim Styles CSS -->
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_directory'); ?>/favicon/apple-touch-icon.png">
@@ -135,12 +138,12 @@
 	<div class="container level">
 		<div class="level-left">
     <div class="level-item">
-      <h1 class="subtitle is-5">
+      <h1 class="subtitle is-5" id="esquerda-topo">
         <strong>Hawks</strong>&nbsp;<i class="fas fa-caret-right"></i>&nbsp;Agência de Marketing Digital
       </h1>
     </div>
   </div>
-  <div class="level-right">
+  <div class="level-right" id="direita-topo">
 		<p class="level-item"><a class="link-zap" href="#"><i class="fab fa-whatsapp"></i> +55 11 94245-3563</a> <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fa fa-envelope"></i> |
 		</p>
 		<p class="level-item"><a href="javascript()" data-toggle="modal" data-target="#orc-rapido" class="button bto-top">Orçamento Rápido</a></p>
@@ -163,7 +166,7 @@
     <a class="link is-info">Blog</a>
   </p>
   <p class="level-item has-text-centered">
-    <img src="<?php bloginfo('template_directory');?>/img/logo-icon.png" alt="Agência Hawks" style="height: 7em;" data-placement="bottom" data-toggle="tooltip" title="Agência Hawks" >
+    <a href="<?php echo site_url();?>/"><img src="<?php bloginfo('template_directory');?>/img/logo-icon.png" alt="Agência Hawks" style="height: 7em;" data-placement="bottom" data-toggle="tooltip" title="Agência Hawks" ></a>
   </p>
   <p class="level-item has-text-centered">
     <a class="link is-info">Serviços</a>

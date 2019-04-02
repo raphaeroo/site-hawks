@@ -169,3 +169,16 @@ $('#owl-carousel-footer').owlCarousel({
 		}
 	}
 });
+//////////////////////////////////////
+var origin   = window.location.pathname;
+var caminho = '/site-hawks/blog/';
+$(function (){
+	if (origin == caminho){
+		$('#esquerda-topo').css('color', '#1a2633');
+		$('#direita-topo').css('color', '#1a2633');
+		$('.is-info').css('color', '#1a2633');
+		$( "<style>header a.link:before, header a.link:after { background: #1a2633 }</style>" ).appendTo( "head" );
+	} else {
+		console.log('Voe Mais Alto Sempre! Agência - Hawks');
+	}
+})
