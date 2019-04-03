@@ -31,7 +31,7 @@ get_header();
           <div class="post-body">
             <div class="post-category">
               <a href="<?php the_permalink(); ?>"><?php foreach((get_the_category()) as $category){
-                    echo $category->name."<br>";
+                    echo $category->name." ";
                     echo category_description($category);
                   } ?> da Semana</a>
             </div>
@@ -99,38 +99,40 @@ get_header();
           </div>
         </div>
         <div class="row no-gutters">
+
+          <?php
+                      $args = array(
+                          'post_type' => 'blog',
+                          'posts_per_page' => 4,
+                          'order' => 'desc',
+                          'orderby' => 'date',
+                      );
+
+                      $loop = new WP_Query( $args );
+                      $i = 0;
+
+                      while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+
           <div class="col-md-6 col-sm-12 mb-3">
+<a href="<?php the_permalink(); ?>">
             <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
+              <img src="<?php the_post_thumbnail_url( 'large' ); ?>">
               <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
+              <h2><?php the_title();?></h2>
+              <a href="<?php the_permalink(); ?>">Leia Mais</a>
+            </div></a>
           </div>
-          <div class="col-md-6 col-sm-12 mb-3">
-            <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
-              <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12 mb-3">
-            <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
-              <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12 mb-3">
-            <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
-              <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
-          </div>
+
+          <?php
+              $i ++;
+                               if($i % 4 == 0) {
+                          echo '<div class="mb-2"></div>';
+                         }
+                         wp_reset_query();
+                  endwhile;
+              ?>
+
         </div>
         <div class="recentes-session">
           <div class="col-12">
@@ -138,38 +140,39 @@ get_header();
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-md-6 col-sm-12 mb-3">
-            <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
-              <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12 mb-3">
-            <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
-              <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12 mb-3">
-            <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
-              <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12 mb-3">
-            <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
-              <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
-          </div>
+          <?php
+                      $args = array(
+                          'post_type' => 'blog',
+                          'posts_per_page' => 4,
+                          'order' => 'asc',
+                          'orderby' => 'rand',
+                      );
+
+                      $loop = new WP_Query( $args );
+                      $i = 0;
+
+                      while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+
+                      <div class="col-md-6 col-sm-12 mb-3">
+            <a href="<?php the_permalink(); ?>">
+                        <div class="box-post">
+                          <img src="<?php the_post_thumbnail_url( 'large' ); ?>">
+                          <div class="pb-4"></div>
+                          <h2><?php the_title();?></h2>
+                          <a href="<?php the_permalink(); ?>">Leia Mais</a>
+                        </div></a>
+                      </div>
+          <?php
+              $i ++;
+                               if($i % 4 == 0) {
+                          echo '<div class="mb-2"></div>';
+                         }
+                         wp_reset_query();
+                  endwhile;
+              ?>
+
+
         </div>
         <div class="recentes-session">
           <div class="col-12">
@@ -177,31 +180,40 @@ get_header();
           </div>
         </div>
         <div class="row no-gutters">
+
+          <?php
+                      $args = array(
+                          'post_type' => 'blog',
+                          'posts_per_page' => 3,
+                          'order' => 'asc',
+                          'orderby' => 'date',
+                          'category_name' => 'mais-vendas'
+                      );
+
+                      $loop = new WP_Query( $args );
+                      $i = 0;
+
+                      while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
           <div class="col-md-4 col-sm-12 mb-3">
-            <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
+            <a href="<?php the_permalink(); ?>"><div class="box-post text-center">
+              <img src="<?php the_post_thumbnail_url( 'large' ); ?>">
               <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
+              <h2><?php the_title();?></h2>
+              <p><?php echo excerpt('15'); ?></p>
+              <a href="<?php the_permalink(); ?>">Leia Mais</a>
+            </div></div>
           </div>
-          <div class="col-md-4 col-sm-12 mb-3">
-            <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
-              <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-12 mb-3">
-            <div class="box-post">
-              <img src="<?php bloginfo('template_directory');?>/img/1.jpg">
-              <div class="pb-4"></div>
-              <h2>Titulo</h2>
-              <a href="#">Link</a>
-            </div>
-          </div>
-        </div>
+          <?php
+              $i ++;
+                               if($i % 3 == 0) {
+                          echo '<div class="mb-2"></div>';
+                         }
+                         wp_reset_query();
+                  endwhile;
+              ?>
+
+
       </div>
       <div class="col-md-4 col-lg-4 col-xs-12-col-sm-12">
         <div class="box-ads mb-5">
@@ -209,7 +221,7 @@ get_header();
         </div>
         <div class="form-box-blog mb-5">
           <h3>Faça um Orçamento</h3>
-            <?php echo do_shortcode('[contact-form-7 id="5" title="form-baixo-banner"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="43" title="form-pag-blog"]'); ?>
         </div>
         <div class="box-smm mb-5">
           <h3>Siga Nossas Redes</h3>
@@ -225,19 +237,31 @@ get_header();
               Saiba Mais
             </div>
             <ul class="list-group list-group-flush">
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
-              <a href="#"><li class="list-group-item">Cras justo odio</li></a>
+              <?php
+                          $args = array(
+                              'post_type' => 'blog',
+                              'posts_per_page' => 20,
+                              'order' => 'asc',
+                              'orderby' => 'date',
+                          );
+
+                          $loop = new WP_Query( $args );
+                          $i = 0;
+
+                          while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+
+              <a href="<?php the_permalink(); ?>"><li class="list-group-item"><?php the_title();?></li></a>
+
+              <?php
+                  $i ++;
+                                   if($i % 20 == 0) {
+                              echo '<div class="mb-2"></div>';
+                             }
+                             wp_reset_query();
+                      endwhile;
+                  ?>
+
             </ul>
           </div>
         </div>

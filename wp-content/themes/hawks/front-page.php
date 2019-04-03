@@ -282,48 +282,40 @@
     <div class="col-12 text-center" data-aos="fade-up" data-aos-duration="900"><p>Últimas Notícias sobre Marketing Digital</p>
       <h5>Nosso Blog</h5></div>
       <div class="row align-items-center" data-aos="fade-up" data-aos-duration="900" data-aos-delay="250">
+        <?php
+                    $args = array(
+                        'post_type' => 'blog',
+                        'posts_per_page' => 4,
+                        'order' => 'desc',
+                        'orderby' => 'date',
+                    );
+
+                    $loop = new WP_Query( $args );
+                    $i = 0;
+
+                    while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
-          <a href="#">
+          <a href="<?php the_permalink(); ?>">
             <div class="box-blog">
-              <div class="img-blog mb-2" style="background-image: url('');"></div>
-              <small>Data post</small>
-              <h6  class="mt-3">Titulo Blog</h6>
-              <p>Excerpt Blog</p>
+              <div class="img-blog mb-2" style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>');"></div>
+              <small><?php echo get_the_date( get_option('date_format') ); ?></small>
+              <h6  class="mt-3"><?php the_title();?></h6>
+              <p><?php echo excerpt('20'); ?></p>
             </div>
           </a>
         </div>
-        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
-          <a href="#">
-            <div class="box-blog">
-              <div class="img-blog mb-2" style="background-image: url('');"></div>
-              <small>Data post</small>
-              <h6  class="mt-3">Titulo Blog</h6>
-              <p>Excerpt Blog</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
-          <a href="#">
-            <div class="box-blog">
-              <div class="img-blog mb-2" style="background-image: url('');"></div>
-              <small>Data post</small>
-              <h6  class="mt-3">Titulo Blog</h6>
-              <p>Excerpt Blog</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
-          <a href="#">
-            <div class="box-blog">
-              <div class="img-blog mb-2" style="background-image: url('');"></div>
-              <small>Data post</small>
-              <h6  class="mt-3">Titulo Blog</h6>
-              <p>Excerpt Blog</p>
-            </div>
-          </a>
-        </div>
+        <?php
+            $i ++;
+                             if($i % 4 == 0) {
+                        echo '<div class="mb-2"></div>';
+                       }
+                       wp_reset_query();
+                endwhile;
+            ?>
+
+
       </div>
-      <div class="col-12 text-center"><a class="button" target="_blank" href="<?php echo site_url();?>/blog/">Ver Mais</a></div>
+      <div class="col-12 text-center mt-3"><a class="button" target="_blank" href="<?php echo site_url();?>/blog/">Ver Mais</a></div>
   </div>
 </section>
 <section id="carousel-footer">

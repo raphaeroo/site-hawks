@@ -394,33 +394,33 @@ section:not(#slider) {
 			@include transition(opacity 1s ease-in-out, width .4s);
 		}
 	}
-	.bt-form{
-		border: 1px solid $cor-borda;
-		background-color: $transparente;
-		width: 40%;
-		color: $preto-hawks;
-		font-size: 1.4rem;
-		@include border-radius(0px);
-		@include transition(width .4s, linear .2s);
-		@include animation(borda 3s infinite);
-		&:focus{
+}
+.bt-form{
+	border: 1px solid $cor-borda;
+	background-color: $transparente;
+	width: 40%;
+	color: $preto-hawks;
+	font-size: 1.4rem;
+	@include border-radius(0px);
+	@include transition(width .4s, linear .2s);
+	@include animation(borda 3s infinite);
+	&:focus{
+		border: 1px solid $cor-hawks;
+		background-color: $cor-hawks;
+		color: $cor-hawks-secundaria !important;
+		width: 100%;
+		&:hover{
 			border: 1px solid $cor-hawks;
 			background-color: $cor-hawks;
-			color: $cor-hawks-secundaria !important;
+			color: $cor-hawks-secundaria;
 			width: 100%;
-			&:hover{
-				border: 1px solid $cor-hawks;
-				background-color: $cor-hawks;
-				color: $cor-hawks-secundaria;
-				width: 100%;
-			}
 		}
-		&:hover{
-			width: 42%;
-			border: 1px solid $cor-hawks;
-			color: $cor-hawks;
-			@include animation(borda 1s);
-		}
+	}
+	&:hover{
+		width: 42%;
+		border: 1px solid $cor-hawks;
+		color: $cor-hawks;
+		@include animation(borda 1s);
 	}
 }
 #nossos-trabalhos{
@@ -687,4 +687,5 @@ footer{
 	}
 }
 @import 'blog';
+@import 'single-blog';
 @import 'media';

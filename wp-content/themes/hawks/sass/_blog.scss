@@ -3,7 +3,7 @@
   position: relative;
   top: 0;
   z-index: 5;
-  background-color: $cor-hawks-secundaria;
+  background-color: $preto-hawks;
   width: 100%;
   @media screen and (max-width: 768px){
     background-color: $preto-hawks;
@@ -133,6 +133,27 @@
     border-radius: 5px;
     img{
       max-width: 95%;
+    }
+    h2{
+      color: $preto-hawks;
+      font-size: 2rem;
+      @include transition (color .4s ease);
+      &:hover{
+        color: $cor-hawks;
+      }
+    }
+    a{
+      color: $cor-logo;
+      font-weight: 400;
+      &:hover{
+        font-weight: 600;
+      }
+    }
+    p{
+      font-style: normal;
+      font-size: 1.2rem;
+      color: $cinza-sessao;
+      font-weight: 400;
     }
   }
   .box-ads{
