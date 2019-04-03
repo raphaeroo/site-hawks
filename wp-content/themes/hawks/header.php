@@ -52,7 +52,7 @@
 				<ul>
 					<a href="<?php echo site_url();?>"><li>Home</li></a>
 					<a href="<?php echo site_url();?>/blog/"><li>Blog</li></a>
-					<a href="<?php echo site_url();?>/"><li>Serviços</li></a>
+					<a href="<?php echo site_url();?>/servicos/"><li>Serviços</li></a>
 					<a href="<?php echo site_url();?>/"><li>Contato</li></a>
 				</ul>
 			</div>
@@ -75,16 +75,16 @@
 	  </div>
 	  <div class="level-right sem-cel" style="padding-top: 1em;">
 			<p class="level-item has-text-centered">
-		    <a class="link is-info">Home</a>
+		    <a class="link is-info" href="<?php echo site_url();?>">Home</a>
 		  </p>
 		  <p class="level-item has-text-centered">
-		    <a class="link is-info">Blog</a>
+		    <a class="link is-info" href="<?php echo site_url();?>/blog/">Blog</a>
 		  </p>
 		  <p class="level-item has-text-centered">
-		    <a class="link is-info">Serviços</a>
+		    <a class="link is-info" href="<?php echo site_url();?>/servicos/">Serviços</a>
 		  </p>
 		  <p class="level-item has-text-centered">
-		    <a class="link is-info">Contato</a>
+		    <a class="link is-info" href="<?php echo site_url();?>">Contato</a>
 		  </p>
 			<p class="level-item"><a href="javascript()" data-toggle="modal" data-target="#orc-rapido" class="button bto-top">Orçamento Rápido</a></p>
 	  </div>
@@ -160,19 +160,19 @@
 <div class="container sem-cel">
 <nav class="level animated fadeInUp delay-1s">
   <p class="level-item has-text-centered">
-    <a class="link is-info">Home</a>
+    <a class="link is-info" href="<?php echo site_url();?>">Home</a>
   </p>
   <p class="level-item has-text-centered">
-    <a class="link is-info">Blog</a>
+    <a class="link is-info" href="<?php echo site_url();?>/blog/">Blog</a>
   </p>
   <p class="level-item has-text-centered">
     <a href="<?php echo site_url();?>/"><img src="<?php bloginfo('template_directory');?>/img/logo-icon.png" alt="Agência Hawks" style="height: 7em;" data-placement="bottom" data-toggle="tooltip" title="Agência Hawks" ></a>
   </p>
   <p class="level-item has-text-centered">
-    <a class="link is-info">Serviços</a>
+    <a class="link is-info" href="<?php echo site_url();?>/servicos/">Serviços</a>
   </p>
   <p class="level-item has-text-centered">
-    <a class="link is-info">Contato</a>
+    <a class="link is-info" href="<?php echo site_url();?>">Contato</a>
   </p>
 </nav>
 </div>

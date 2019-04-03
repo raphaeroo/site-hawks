@@ -1,0 +1,90 @@
+#section-servicos-banner{
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/section-servicos.jpeg");
+  position: relative;
+  z-index: 4;
+  &:after{
+    @include pseudo();
+    @include overlay();
+    background-color: rgba(0,0,0,0.8);
+  }
+  .hero-body{
+    z-index: 6;
+  }
+  @media screen and (max-width: 768px){
+    padding: 10em 0em!important;
+  }
+}
+#content-servicos{
+  background-color: $bg-sessao;
+  #servico-loop{
+    .wrap-loop{
+      width: 100%;
+      padding: 1em;
+      border-radius: 5px;
+      border: 1px solid transparent;
+      @include transition (all 2s ease-in-out);
+      &:hover{
+        border: 1px solid $cinza;
+      }
+    }
+    h2{
+      color: $cor-hawks;
+    }
+    h3{
+      color: $preto-hawks;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    p{
+      font-style: normal;
+      color: $cinza-sessao;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+    .box-img-serv{
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .buttons{
+      .button{
+        padding: 1.5em 1em;
+      }
+      .bto-info{
+        background-color: $cor-hawks;
+        border: 1px solid $cor-hawks;
+        color: $cor-hawks-secundaria;
+          @include transition (all .4s ease-in-out);
+        &:hover{
+          background-color: $cor-hawks-secundaria;
+          color: $cor-hawks;
+        }
+      }
+      .bto-mais{
+        background-color: $cor-hawks-secundaria;
+        border: 1px solid $cor-hawks;
+        color: $cor-hawks;
+        padding: 1em 1em!important;
+          @include transition (all .4s ease-in-out);
+        &:hover{
+          background-color: darken( $cor-hawks, 10% );
+          color: $cor-hawks-secundaria;
+        }
+      }
+      .whats{
+        background-color: $whatsapp;
+        border: 1px solid $whatsapp;
+        color: white;
+          @include transition (all .4s ease-in-out);
+        &:hover{
+          background-color: transparent;
+          color: $whatsapp;
+        }
+      }
+    }
+  }
+}
