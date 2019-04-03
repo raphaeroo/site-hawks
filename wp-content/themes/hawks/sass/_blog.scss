@@ -225,3 +225,34 @@
     height: 5em;
   }
 }
+#todos-posts{
+  .bto-info{
+    background-color: $cor-hawks;
+    color: $cor-hawks-secundaria;
+    border: 1px solid $cor-hawks;
+    @include transition(all .3s ease-in-out);
+    &:hover{
+      background-color: darken($cor-hawks, 15%);
+      border: 1px solid transparent;
+    }
+  }
+  p.card-text{
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    color: $cinza-sessao;
+  }
+  h4{
+    color: $cor-hawks;
+    font-size: 2rem;
+  }
+  .card {
+    width: 100%;
+    padding: .4em;
+    .card-body .card-title{
+      color: $cor-hawks;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+}

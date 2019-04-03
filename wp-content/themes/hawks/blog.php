@@ -268,6 +268,9 @@ get_header();
       </div>
     </div>
     <div class="col-12 text-center mt-5">
+      <div class="mb-4">
+        <a href="<?php echo site_url();?>/blog-todos/" class="button">Todos os Posts</a>
+      </div>
       <div class="ads-w">Ads Aqui</div>
     </div>
   </div>

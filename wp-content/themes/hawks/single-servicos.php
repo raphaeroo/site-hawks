@@ -27,8 +27,8 @@
                   <div class="col-md-8 col-sm-12">
                     <div class="call-modal">
                       <h6>Não Perca Tempo!</h6>
-                      <p class="subtitle">Agora é hora de usar nosso serviço de <b><?php the_title();?></b> para aumentar suas vendas.</p>
-                      <a class="button bto-info" href="#">Fazer Orçamento</a>
+                      <p class="subtitle">Agora é hora de usar o que você aprendeu sobre <b><?php the_title();?></b> para aumentar suas vendas de forma eficaz.</p>
+                      <a class="button bto-info" href="#" data-toggle="modal" data-target="#orc-rapido">Fazer Orçamento</a>
                     </div>
                   </div>
                 </div>
@@ -40,7 +40,7 @@
       <?php
                   $args = array(
                       'post_type' => 'servicos',
-                      'posts_per_page' => 4,
+                      'posts_per_page' => 3,
                       'order' => 'desc',
                       'orderby' => 'rand',
                       'post__not_in' => array( get_the_ID() )
