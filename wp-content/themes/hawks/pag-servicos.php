@@ -32,7 +32,7 @@ get_header();
 
                   while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-      <div class="row wrap-loop">
+      <div class="row wrap-loop mb-4">
       <div class="col-12 mb-4 text-left">
         <h2><?php echo do_shortcode('[acf field="titulo_servico"]');?></h2>
       </div>
@@ -46,7 +46,7 @@ get_header();
             <h3><?php the_title();?></h3>
             <p><?php echo excerpt('30'); ?></p>
             <div class="buttons">
-            <a class="button bto-mais mb-2" href="<?php the_permalink(); ?>"><b>Veja Mais</b>&nbsp;<i class="fas fa-angle-double-right"></i></a><br>
+            <a class="button bto-mais mb-2" href="<?php the_permalink(); ?>"><b>Continue Lendo</b>&nbsp;<i class="fas fa-angle-double-right"></i></a><br>
             <a class="button bto-info mb-2" href="#">Quero contratar esse!</a>
             <a class="button whats mb-2" href="#"><span class="icon is-small"><i class="fab fa-whatsapp"></i></span>
                 <span>Whatsapp</span>

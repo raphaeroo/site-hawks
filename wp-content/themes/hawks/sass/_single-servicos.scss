@@ -1,0 +1,115 @@
+.divisor{
+  margin-top: 30em;
+}
+#topo-single-servicos{
+  position: absolute;
+  top: 0;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../img/hawk.jpeg');
+  z-index: 4;
+  height: 30em!important;
+  &:after{
+    @include pseudo();
+    @include overlay();
+    background-color: rgba(0,0,0,0.85);
+  }
+  .hero-servico{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    top: 70%;
+    color: $cor-hawks-secundaria;
+    z-index: 7;
+    h1{font-weight: 600;}
+  }
+}
+#content-servico{
+  background-color: $bg-sessao;
+  .conteudo-single{
+    h2, h3, h4, h5, h6{
+    color: $preto-hawks;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  p{
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    color: $cinza-sessao;
+  }
+  img.alignleft{
+    float: left;
+    margin-right: 1em;
+    @media screen and (max-width: 768px){
+      float: none;
+      text-align: center;
+      clear: both;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  img.alignright{
+    float: right;
+    margin-left: 1em;
+    @media screen and (max-width: 768px){
+      float: none;
+      text-align: center;
+      clear: both;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+  .bto-info{
+    background-color: $cor-hawks;
+    color: $cor-hawks-secundaria;
+    border: 1px solid $cor-hawks;
+    @include transition(all .3s ease-in-out);
+    &:hover{
+      background-color: darken($cor-hawks, 15%);
+      border: 1px solid transparent;
+    }
+  }
+  .orcamento-servico{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    padding: 1em;
+    @include transition(all .4s ease);
+    &:hover{
+      @include box-shadow (0px 0px 5px $preto-hawks);
+      border: 1px solid lighten($cinza-sessao, 15%);
+    }
+    .img-servico-form{
+      width: 100%;
+      height: 10em;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  .servico-lado-direito{
+    p{
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 400;
+      color: $cinza-sessao;
+    }
+    h4{
+      color: $cor-hawks;
+      font-size: 2rem;
+    }
+    .card {
+      width: 100%;
+      padding: .4em;
+      .card-body .card-title{
+        color: $cor-hawks;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
