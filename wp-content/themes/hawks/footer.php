@@ -26,7 +26,7 @@
           <p><a href="#">Desenvolvimento de Sites</a></p>
           <p><a href="#">Mídias Sociais (SMM)</a></p>
           <p><a href="#">Google Ads (PPC)</a></p>
-          <p><a href="#">Blog</a></p>
+          <p><a href="<?php echo site_url();?>/blog/">Blog</a></p>
         </div>
     </div>
     <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">

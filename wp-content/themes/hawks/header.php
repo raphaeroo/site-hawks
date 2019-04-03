@@ -50,10 +50,10 @@
 			</div>
 			<div class="wrap-links">
 				<ul>
-					<a href="#"><li>Link&nbsp;1</li></a>
-					<a href="#"><li>Link&nbsp;1</li></a>
-					<a href="#"><li>Link&nbsp;1</li></a>
-					<a href="#"><li>Link&nbsp;1</li></a>
+					<a href="<?php echo site_url();?>"><li>Home</li></a>
+					<a href="<?php echo site_url();?>/blog/"><li>Blog</li></a>
+					<a href="<?php echo site_url();?>/"><li>Serviços</li></a>
+					<a href="<?php echo site_url();?>/"><li>Contato</li></a>
 				</ul>
 			</div>
 		</div>

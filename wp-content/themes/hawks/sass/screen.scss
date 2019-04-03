@@ -36,6 +36,16 @@ $altura-slider: 750px;
 	z-index: 50;
 	@include transition(top 0.7s ease-in-out);
 	@include box-shadow(0px 2px 5px $preto-hawks);
+	@media screen and (max-width: 768px){
+		img {
+			padding: 1em 0em;
+		}
+		i{
+			cursor: pointer;
+			color: $cor-hawks;
+			font-size: 2.3rem;
+		}
+	}
 }
 header{
 	position: absolute;
@@ -104,8 +114,8 @@ header{
 		}
 	}
 	i.fa-bars{
-		font-size: 2rem;
-		color: $cor-hawks;
+		font-size: 2.3rem;
+		color: $cor-logo;
 	}
 	.bto-top{
 		color: $cor-hawks;
