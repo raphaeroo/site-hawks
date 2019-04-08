@@ -1,0 +1,31 @@
+#topo-contato{
+  height: 20em!important;
+  background-position: center;
+  background-image: url('../img/contato.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  &:after{
+    @include pseudo();
+    @include overlay();
+    background-color: rgba(0,0,0,0.8);
+  }
+}
+#content-contato{
+  background-color: $bg-sessao;
+  .level-item{
+    h2.title{
+      color: $cor-hawks;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    p.subtitle{
+      font-style: normal;
+      font-size: 1rem;
+      font-weight: 400;
+      color: darken($cinza, 30%);
+    }
+  }
+}
