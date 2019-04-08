@@ -32,7 +32,7 @@ get_header();
 
                   while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-      <div class="row wrap-loop mb-4">
+      <div class="row wrap-loop mb-4" data-aos="fade-up">
       <div class="col-12 mb-4 text-left">
         <h2><?php echo do_shortcode('[acf field="titulo_servico"]');?></h2>
       </div>
