@@ -53,7 +53,7 @@
 					<a href="<?php echo site_url();?>"><li>Home</li></a>
 					<a href="<?php echo site_url();?>/blog/"><li>Blog</li></a>
 					<a href="<?php echo site_url();?>/servicos/"><li>Serviços</li></a>
-					<a href="<?php echo site_url();?>/"><li>Contato</li></a>
+					<a href="<?php echo site_url();?>/contato/"><li>Contato</li></a>
 				</ul>
 			</div>
 		</div>
@@ -84,7 +84,7 @@
 		    <a class="link is-info" href="<?php echo site_url();?>/servicos/">Serviços</a>
 		  </p>
 		  <p class="level-item has-text-centered">
-		    <a class="link is-info" href="<?php echo site_url();?>">Contato</a>
+		    <a class="link is-info" href="<?php echo site_url();?>/contato/">Contato</a>
 		  </p>
 			<p class="level-item"><a href="javascript()" data-toggle="modal" data-target="#orc-rapido" class="button bto-top">Orçamento Rápido</a></p>
 	  </div>
@@ -144,7 +144,7 @@
     </div>
   </div>
   <div class="level-right" id="direita-topo">
-		<p class="level-item"><a class="link-zap" href="#"><i class="fab fa-whatsapp"></i> +55 11 94245-3563</a> <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fa fa-envelope"></i> |
+		<p class="level-item"><a class="link-zap" href="https://api.whatsapp.com/send?phone=5511942453563&text=Gostaria%20de%20um%20or%C3%A7amento!"><i class="fab fa-whatsapp"></i> +55 11 94245-3563</a> <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fa fa-envelope"></i> |
 		</p>
 		<p class="level-item"><a href="javascript()" data-toggle="modal" data-target="#orc-rapido" class="button bto-top">Orçamento Rápido</a></p>
   </div>
@@ -172,7 +172,7 @@
     <a class="link is-info" href="<?php echo site_url();?>/servicos/">Serviços</a>
   </p>
   <p class="level-item has-text-centered">
-    <a class="link is-info" href="<?php echo site_url();?>">Contato</a>
+    <a class="link is-info" href="<?php echo site_url();?>/contato/">Contato</a>
   </p>
 </nav>
 </div>

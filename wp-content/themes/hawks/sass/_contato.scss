@@ -28,4 +28,28 @@
       color: darken($cinza, 30%);
     }
   }
+  div.lado-direito-contato{
+    p{
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      color: darken($cinza, 5%);
+      i{
+        color: $cor-hawks;
+      }
+    }
+    h2{
+      color: darken($cinza, 25%);
+      font-weight: 700;
+    }
+  }
+  div.servicos-contato{
+    h2{
+    color: $cor-hawks;
+    font-weight: 700;
+    }
+    li{
+      font-size: 1.4rem;
+    }
+  }
 }
